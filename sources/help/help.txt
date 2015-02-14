@@ -1,0 +1,33 @@
+Allum-1				Marienbad Game Reference Guide			      Allum-1
+
+
+
+
+NAME
+	Allum-1 - Play a game with mathes (be careful, don't burn yourself)
+
+SYNOPSIS
+	./allum1
+
+DESCRIPTION
+	Marienbad is a mathematical game of strategy in which two players take turns
+removing matches from distinct rows. On each turn, a player must remove at least one match,
+and may remove any number of matches provided they all come from the same row.
+
+OPTIONS
+   Matching Control
+	-h, --help
+		Print a usage message briefly summarizing these command-line options and the
+		bug-reporting address, then exit.
+
+	-p, --personalize
+		Let you choose the disposition of the game. The number of rows, of matches,
+		the level of the IA, and the first player.
+
+	-t, --term
+		Changing the text mode into graphics mode with different way to play.
+
+EXIT STATUS
+	Two ways to stop the game. First, you can type 'give up' during your turn at any time
+	to stop the current play and choose to try again. Or, type 'exit' to close the whole
+	game.
