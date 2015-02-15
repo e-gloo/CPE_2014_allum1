@@ -5,7 +5,7 @@
 ** Login   <coodie_d@epitech.net>
 ** 
 ** Started on  Fri Feb 13 14:47:04 2015 Dylan Coodien
-** Last update Sat Feb 14 22:02:55 2015 Dylan Coodien
+** Last update Sun Feb 15 14:59:34 2015 Dylan Coodien
 */
 
 #include <stdlib.h>
@@ -32,7 +32,7 @@ int		perso(void)
   if (choose_first(info) != 0)
     return (0);
   turn(list, info);
-  free_list(list);
-  free(info);
+  if (info != NULL)
+    free(info);
   return (1);
 }

@@ -5,7 +5,7 @@
 ** Login   <coodie_d@epitech.net>
 ** 
 ** Started on  Fri Feb  6 13:08:16 2015 Dylan Coodien
-** Last update Sat Feb 14 23:06:02 2015 Dylan Coodien
+** Last update Sun Feb 15 15:29:22 2015 Dylan Coodien
 */
 
 #ifndef ALUM1_H_
@@ -33,7 +33,6 @@ typedef	struct	s_list
   int		num;
   int		row;
   int		save;
-  int		first;
   struct s_list	*next;
   struct s_list	*prev;
 }		t_list;
@@ -42,7 +41,6 @@ typedef struct	s_vars
 {
   int		row;
   int		num;
-  int		count;
   char		buffer[SIZE];
   char		**tab;
 }		t_vars;
@@ -67,9 +65,12 @@ int		perso(void);
 int		help(void);
 int		check_longer(t_list *list);
 void		change_buffer(t_vars *vars);
+int		players_turn(t_list *list, t_vars *vars);
+int		after_turn(t_vars *vars, t_list *list);
 t_vars		*init(void);
+void		display_IA_move(t_list *tmp);
 int		my_putnbr_base_rev_i(int nb, char *base, int i);
 int		check_game(t_list *list, t_vars *vars);
-char		*algo(t_list *list);
+char		*algo(t_list *list, t_vars *vars);
 
 #endif /* !ALUM1_H_ */

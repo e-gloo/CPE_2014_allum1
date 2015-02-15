@@ -5,7 +5,7 @@
 ** Login   <coodie_d@epitech.net>
 ** 
 ** Started on  Sat Feb  7 17:44:08 2015 Dylan Coodien
-** Last update Fri Feb 13 15:45:38 2015 Dylan Coodien
+** Last update Sun Feb 15 15:29:56 2015 Dylan Coodien
 */
 
 #include <stdlib.h>
@@ -75,11 +75,7 @@ int		marienbad(t_list *list, t_algo *al)
 	  al->len = check_longer(list);
 	  if ((turn_in(list, al)) == 0)
 	    {
-	      my_putstr("\nIA takes ");
-	      my_put_nbr(tmp->save - tmp->num);
-	      my_putstr(" in row ");
-	      my_put_nbr(tmp->row);
-	      my_putstr("\n");
+	      display_IA_move(tmp);
 	      return (0);
 	    }
 	  tmp->num++;
@@ -89,13 +85,16 @@ int		marienbad(t_list *list, t_algo *al)
   return (-1);
 }
 
-char		*algo(t_list *list)
+char		*algo(t_list *list, t_vars *vars)
 {
   t_algo	*al;
 
   if ((al = malloc(sizeof(*al))) == NULL)
     return (NULL);
   marienbad(list, al);
-  my_show_list(list);
+  if (al != NULL)
+    free(al);
+  if (check_game(list, vars) != 0)
+    my_show_list(list);
   return (NULL);
 }

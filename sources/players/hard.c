@@ -5,7 +5,7 @@
 ** Login   <coodie_d@epitech.net>
 ** 
 ** Started on  Sat Feb 14 19:12:55 2015 Dylan Coodien
-** Last update Sat Feb 14 22:16:25 2015 Dylan Coodien
+** Last update Sun Feb 15 15:23:32 2015 Dylan Coodien
 */
 
 #include "my.h"
@@ -26,11 +26,7 @@ int		check_tips(t_list *list, t_list *tmp, t_info *info, t_vars *vars)
     }
   else
     {
-      my_putstr("\nIA takes ");
-      my_put_nbr(tmp->save - tmp->num);
-      my_putstr(" match(es) in row ");
-      my_put_nbr(tmp->row);
-      my_putstr("\n");
+      display_IA_move(tmp);
       if (check_game(list, vars) == 0)
 	{
 	  my_putstr(WON);

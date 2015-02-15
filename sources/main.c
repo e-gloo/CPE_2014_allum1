@@ -5,10 +5,9 @@
 ** Login   <coodie_d@epitech.net>
 ** 
 ** Started on  Fri Feb  6 13:12:48 2015 Dylan Coodien
-** Last update Fri Feb 13 15:45:30 2015 Dylan Coodien
+** Last update Sun Feb 15 14:08:45 2015 Dylan Coodien
 */
 
-#include "my.h"
 #include "alum1.h"
 
 int		main(int ac, char **av)

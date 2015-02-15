@@ -5,7 +5,7 @@
 ** Login   <coodie_d@epitech.net>
 ** 
 ** Started on  Sat Feb 14 19:02:50 2015 Dylan Coodien
-** Last update Sat Feb 14 21:45:32 2015 Dylan Coodien
+** Last update Sun Feb 15 14:12:08 2015 Dylan Coodien
 */
 
 #include <stdlib.h>
@@ -27,5 +27,7 @@ int		IA_turn(t_list *list, t_info *info, t_vars *vars)
     easy(list, info, al, vars);
   else
     hard(list, al, info, vars);
+  if (al != NULL)
+    free(al);
   return (0);
 }

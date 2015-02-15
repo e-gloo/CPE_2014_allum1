@@ -5,7 +5,7 @@
 ** Login   <coodie_d@epitech.net>
 ** 
 ** Started on  Sat Feb 14 19:36:09 2015 Dylan Coodien
-** Last update Sat Feb 14 23:03:15 2015 Dylan Coodien
+** Last update Sun Feb 15 15:22:18 2015 Dylan Coodien
 */
 
 #include <time.h>
@@ -17,7 +17,36 @@
 #include "alum1.h"
 #include "perso.h"
 
-int		part2(t_list *list, int i, int t)
+int		last_match(t_list *list)
+{
+  int		check;
+  int		row;
+  t_list	*tmp;
+
+  tmp = list->next;
+  check = 0;
+  while (tmp != list)
+    {
+      if (tmp->num == 1)
+	{
+	  check++;
+	  row = tmp->row;
+	}
+      tmp = tmp->next;
+    }
+  if (check == 1)
+    {
+      tmp = list->next;
+      while (tmp->row != row)
+	tmp = tmp->next;
+      tmp->num = 0;
+      display_IA_move(tmp);
+      return (0);
+    }
+  return (1);
+}
+
+int		part2(t_list *list, int t)
 {
   t_list	*tmp;
 
@@ -29,16 +58,12 @@ int		part2(t_list *list, int i, int t)
       else
 	{
 	  srand(t * getpid());
-	  while (tmp->row != (rand() % i))
+	  while (tmp->row != (rand() % (list->prev->row + 1)))
 	    tmp = tmp->next;
 	  if (tmp->num > 0 && ((tmp->save = tmp->num) != 0))
 	    {
 	      tmp->num = tmp->num - ((rand() % tmp->num) + 1);
-	      my_putstr("\nIA takes ");
-	      my_put_nbr(tmp->save - tmp->num);
-	      my_putstr(" match(es) in row ");
-	      my_put_nbr(tmp->row);
-	      my_putstr("\n");
+	      display_IA_move(tmp);
 	      return (0);
 	    }
 	}
@@ -48,21 +73,13 @@ int		part2(t_list *list, int i, int t)
 
 int		easy(t_list *list, t_info *info, t_algo *al, t_vars *vars)
 {
-  t_list	*tmp;
-  int		i;
   int		t;
 
   t = 0;
   if (info->tips == 1)
     return (hard(list, al, info, vars));
-  i = 0;
-  tmp = list->next;
-  while (tmp != list)
-    {
-      i++;
-      tmp = tmp->next;
-    }
-  part2(list, i, t);
+  if (last_match(list) != 0)
+    part2(list, t);
   if (check_game(list, vars) == 0)
     {
       my_putstr(WON);

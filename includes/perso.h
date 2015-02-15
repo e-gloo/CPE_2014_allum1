@@ -5,7 +5,7 @@
 ** Login   <coodie_d@epitech.net>
 ** 
 ** Started on  Fri Feb 13 15:13:58 2015 Dylan Coodien
-** Last update Sat Feb 14 23:06:28 2015 Dylan Coodien
+** Last update Sun Feb 15 14:43:22 2015 Dylan Coodien
 */
 
 #ifndef PERSO_H_
@@ -60,7 +60,6 @@ int		put_all_row(t_info *info, t_list *list);
 int		easy(t_list *list, t_info *info, t_algo *al, t_vars *vars);
 int		hard(t_list *list, t_algo *algo, t_info *info, t_vars *vars);
 int		turn(t_list *list, t_info *info);
-int		players_turn(t_list *list, t_vars *vars);
 int		IA_turn(t_list *list, t_info *info, t_vars *vars);
 
 #endif /* !PERSO_H_ */

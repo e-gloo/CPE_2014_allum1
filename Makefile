@@ -5,15 +5,17 @@
 ## Login   <coodie_d@epitech.net>
 ## 
 ## Started on  Fri Feb  6 12:58:14 2015 Dylan Coodien
-## Last update Sat Feb 14 21:26:27 2015 Dylan Coodien
+## Last update Sun Feb 15 15:25:00 2015 Dylan Coodien
 ##
 
 NAME	= allum1
 
 SRC1	= ./sources/main.c \
+	  ./sources/after_turn.c \
 	  ./sources/change_buffer.c \
 	  ./sources/check_arguments.c \
 	  ./sources/check_game.c \
+	  ./sources/display_IA_move.c \
 	  ./sources/my_free.c \
 	  ./sources/default/begin.c \
 	  ./sources/default/allum1.c \

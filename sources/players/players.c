@@ -5,7 +5,7 @@
 ** Login   <coodie_d@epitech.net>
 ** 
 ** Started on  Sat Feb 14 17:37:11 2015 Dylan Coodien
-** Last update Sat Feb 14 23:01:08 2015 Dylan Coodien
+** Last update Sun Feb 15 14:00:15 2015 Dylan Coodien
 */
 
 #include <unistd.h>
@@ -15,6 +15,9 @@
 
 int		verif_buffer(t_vars *vars, t_list *list)
 {
+  t_list	*tmp;
+
+  tmp = list->next;
   if (vars->tab[1] == NULL || vars->tab[2] != NULL)
     {
       my_puterror(NUM);
@@ -31,6 +34,10 @@ int		verif_buffer(t_vars *vars, t_list *list)
       my_puterror(MATCH);
       return (1);
     }
+  while ((tmp != list) && (vars->row != tmp->row))
+    tmp = tmp->next;
+  if (((tmp->num - vars->num) < 0) && (my_puterror(MANY) != 0))
+    return (1);
   return (0);
 }
 
@@ -41,16 +48,8 @@ int		apply_move(t_list *list, t_vars *vars)
   tmp = list->next;
   while ((tmp != list) && (vars->row != tmp->row))
     tmp = tmp->next;
-  if ((tmp->num - vars->num) < 0)
-    {
-      my_puterror(MANY);
-      tmp = list->next;
-    }
-  else
-    {
-      tmp->num = tmp->num - vars->num;
-      tmp = list;
-    }
+  tmp->num = tmp->num - vars->num;
+  tmp = list;
   if (check_game(list, vars) == 0)
     my_putstr(LOST);
   else
@@ -79,7 +78,7 @@ int		players_turn(t_list *list, t_vars *vars)
 	{
 	  if ((vars->tab = my_str_to_word_tab(vars->buffer)) == NULL)
 	    return (-1);
-	  if (verif_buffer(vars, list) == 0)
+	  if ((verif_buffer(vars, list)) == 0)
 	    return (apply_move(list, vars));
 	  my_free(vars->tab);
 	}
