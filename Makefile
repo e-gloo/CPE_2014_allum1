@@ -5,7 +5,7 @@
 ## Login   <coodie_d@epitech.net>
 ## 
 ## Started on  Fri Feb  6 12:58:14 2015 Dylan Coodien
-## Last update Sun Feb 15 15:25:00 2015 Dylan Coodien
+## Last update Sun Feb 15 15:56:08 2015 Dylan Coodien
 ##
 
 NAME	= allum1
@@ -33,6 +33,7 @@ SRC1	= ./sources/main.c \
 	  ./sources/perso/personalize.c \
 	  ./sources/players/easy.c \
 	  ./sources/players/hard.c \
+	  ./sources/players/one_vs_one.c \
 	  ./sources/players/players.c
 
 SRC2	= ./lib/my_putstr.c \

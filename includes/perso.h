@@ -5,7 +5,7 @@
 ** Login   <coodie_d@epitech.net>
 ** 
 ** Started on  Fri Feb 13 15:13:58 2015 Dylan Coodien
-** Last update Sun Feb 15 14:43:22 2015 Dylan Coodien
+** Last update Sun Feb 15 15:56:31 2015 Dylan Coodien
 */
 
 #ifndef PERSO_H_
@@ -54,9 +54,10 @@ typedef struct	s_info
 
 int		choose_display(t_info *info, t_list *list);
 int		choose_mode(t_info *info);
-int		choose_first(t_info *info);
+int		choose_first(t_info *info, t_list *list);
 int		put_matches_in_row(t_info *info, t_list *list);
 int		put_all_row(t_info *info, t_list *list);
+int		one_versus_one(t_list *list, t_info *info);
 int		easy(t_list *list, t_info *info, t_algo *al, t_vars *vars);
 int		hard(t_list *list, t_algo *algo, t_info *info, t_vars *vars);
 int		turn(t_list *list, t_info *info);

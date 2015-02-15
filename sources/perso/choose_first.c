@@ -5,14 +5,14 @@
 ** Login   <coodie_d@epitech.net>
 ** 
 ** Started on  Sat Feb 14 14:46:27 2015 Dylan Coodien
-** Last update Sat Feb 14 16:37:08 2015 Dylan Coodien
+** Last update Sun Feb 15 16:10:45 2015 Dylan Coodien
 */
 
 #include <unistd.h>
 #include "my.h"
 #include "perso.h"
 
-int	first_player(t_info *info)
+int	first_player(t_info *info, t_list *list)
 {
   int	n;
   char	buff[SIZE];
@@ -31,7 +31,7 @@ int	first_player(t_info *info)
     info->first = 0;
   else
     info->first = 1;
-  return (0);
+  return (one_versus_one(list, info));
 }
 
 int	who(t_info *info)
@@ -56,10 +56,10 @@ int	who(t_info *info)
   return (0);
 }
 
-int	choose_first(t_info *info)
+int	choose_first(t_info *info, t_list *list)
 {
   if (info->mode == 1)
-    return (first_player(info));
+    return (first_player(info, list));
   else
     return (who(info));
   return (0);

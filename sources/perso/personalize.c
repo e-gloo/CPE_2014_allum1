@@ -5,7 +5,7 @@
 ** Login   <coodie_d@epitech.net>
 ** 
 ** Started on  Fri Feb 13 14:47:04 2015 Dylan Coodien
-** Last update Sun Feb 15 14:59:34 2015 Dylan Coodien
+** Last update Sun Feb 15 15:44:51 2015 Dylan Coodien
 */
 
 #include <stdlib.h>
@@ -29,8 +29,8 @@ int		perso(void)
   my_show_list(list);
   if (choose_mode(info) != 0)
     return (0);
-  if (choose_first(info) != 0)
-    return (0);
+  if (choose_first(info, list) != 0)
+    return (1);
   turn(list, info);
   if (info != NULL)
     free(info);
