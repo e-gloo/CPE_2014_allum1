@@ -5,7 +5,7 @@
 ** Login   <coodie_d@epitech.net>
 ** 
 ** Started on  Fri Feb  6 13:08:16 2015 Dylan Coodien
-** Last update Sun Feb 15 17:52:09 2015 Dylan Coodien
+** Last update Sun Feb 15 15:29:22 2015 Dylan Coodien
 */
 
 #ifndef ALUM1_H_
@@ -22,7 +22,7 @@
 # define NO	"no\n"
 # define MANY	"\nToo many matches to take in this row\n"
 # define TURN	"\nYour turn : "
-# define BUG	"\nSegmentation fau... Haha, got ya !\n"
+# define BUG	"\nInsert too big\n"
 # define WON	"\nYOU WOOOOOON !!!\n"
 # define LOST	"\nYOU LOOOOOOST !!!\n"
 # define GU	"give up\n"

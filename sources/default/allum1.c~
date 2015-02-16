@@ -5,7 +5,7 @@
 ** Login   <coodie_d@epitech.net>
 ** 
 ** Started on  Fri Feb  6 13:54:59 2015 Dylan Coodien
-** Last update Mon Feb 16 18:21:20 2015 Dylan Coodien
+** Last update Sun Feb 15 15:29:08 2015 Dylan Coodien
 */
 
 #include <unistd.h>
@@ -34,12 +34,8 @@ int		action(t_list *list)
     {
       if ((players_turn(list, vars)) != 0)
 	return (1);
-      if (((my_strcmp(vars->buffer, GU)) != 0) &&
-	  ((my_strcmp(vars->buffer, EXIT)) != 0))
-	{
-	  algo(list, vars);
-	  my_free(vars->tab);
-	}
+      algo(list, vars);
+      my_free(vars->tab);
     }
   return (after_turn(vars, list));
 }

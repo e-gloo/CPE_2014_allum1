@@ -1,4 +1,4 @@
-Allum-1(1357)			Marienbad Game Reference Guide			Allum-1(1357)
+Allum-1				Marienbad Game Reference Guide			      Allum-1
 
 
 
@@ -16,16 +16,12 @@ and may remove any number of matches provided they all come from the same row.
 
 OPTIONS
    Matching Control
-	-b, --bonuskinder
-		Play against the almost perfect IA. If you find the way break the IA's
-		strategy, you win a Kinder.
-
 	-h, --help
 		Print a usage message briefly summarizing these command-line options and the
 		bug-reporting address, then exit.
 
 	-p, --personalize
-		Let you choose many options such as the disposition of the game, the mode,
+		Let you choose the disposition of the game. The number of rows, of matches,
 		the level of the IA, and the first player.
 
 	-t, --term
@@ -35,19 +31,3 @@ EXIT STATUS
 	Two ways to stop the game. First, you can type 'give up' during your turn at any time
 	to stop the current play and choose to try again. Or, type 'exit' to close the whole
 	game.
-
-NOTES
-	In the option -p, --personalize, you have the possibility to be helped with the
-	command helped.
-
-SEE ALSO
-	./allum1 -b, ./allum1 -h, ./allum1 -p, ./allum1 -t
-
-COLOPHON
-	This page is part of release 2.13 of the allum1 man-pages project. A description of
-	the project, and information about reporting bugs, can't be found anywhere because
-	there's no bug.
-
-
-
-15 Feb 2015				V2.13					Allum-1(1357)
