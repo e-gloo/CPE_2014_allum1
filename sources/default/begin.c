@@ -5,7 +5,7 @@
 ** Login   <coodie_d@epitech.net>
 ** 
 ** Started on  Tue Feb 10 15:09:47 2015 Dylan Coodien
-** Last update Sun Feb 15 14:58:08 2015 Dylan Coodien
+** Last update Thu Feb 19 18:07:04 2015 Dylan Coodien
 */
 
 #include <unistd.h>
@@ -22,7 +22,8 @@ int		begin_game(void)
   list->next = list;
   list->prev = list;
   my_put_in_list(list);
-  my_show_list(list);
+  list->num = list->prev->num;
+  my_show_list(list, list->num);
   action(list);
   return (0);
 }

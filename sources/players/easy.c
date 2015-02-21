@@ -5,7 +5,7 @@
 ** Login   <coodie_d@epitech.net>
 ** 
 ** Started on  Sat Feb 14 19:36:09 2015 Dylan Coodien
-** Last update Sun Feb 15 15:22:18 2015 Dylan Coodien
+** Last update Thu Feb 19 18:09:37 2015 Dylan Coodien
 */
 
 #include <time.h>
@@ -57,12 +57,14 @@ int		part2(t_list *list, int t)
 	tmp = list->next;
       else
 	{
+	  tmp = list->next;
 	  srand(t * getpid());
 	  while (tmp->row != (rand() % (list->prev->row + 1)))
 	    tmp = tmp->next;
-	  if (tmp->num > 0 && ((tmp->save = tmp->num) != 0))
+	  if (tmp->num > 0 && ((tmp->save = tmp->num) > 1))
 	    {
-	      tmp->num = tmp->num - ((rand() % tmp->num) + 1);
+	      tmp->save = tmp->num;
+	      tmp->num = tmp->num - ((rand() % (tmp->num - 1)) + 1);
 	      display_IA_move(tmp);
 	      return (0);
 	    }
@@ -85,6 +87,6 @@ int		easy(t_list *list, t_info *info, t_algo *al, t_vars *vars)
       my_putstr(WON);
       return (-1);
     }
-  my_show_list(list);
+  my_show_list(list, list->num);
   return (0);
 }

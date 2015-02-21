@@ -5,7 +5,7 @@
 ** Login   <coodie_d@epitech.net>
 ** 
 ** Started on  Sat Feb 14 19:12:55 2015 Dylan Coodien
-** Last update Sun Feb 15 15:23:32 2015 Dylan Coodien
+** Last update Fri Feb 20 10:05:36 2015 Dylan Coodien
 */
 
 #include "my.h"
@@ -32,7 +32,7 @@ int		check_tips(t_list *list, t_list *tmp, t_info *info, t_vars *vars)
 	  my_putstr(WON);
 	  return (-1);
 	}
-      my_show_list(list);
+      my_show_list(list, list->num);
     }
   return (0);
 }
@@ -41,7 +41,6 @@ int		check_bit(t_list *list, t_algo *al)
 {
   t_list	*tmp;
 
-  tmp = list->next;
   while (al->n <= (al->len - 1))
     {
       al->count = 0;

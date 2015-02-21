@@ -5,7 +5,7 @@
 ** Login   <coodie_d@epitech.net>
 ** 
 ** Started on  Sat Feb 14 17:37:11 2015 Dylan Coodien
-** Last update Sun Feb 15 17:28:41 2015 Dylan Coodien
+** Last update Thu Feb 19 18:10:28 2015 Dylan Coodien
 */
 
 #include <unistd.h>
@@ -53,7 +53,7 @@ int		apply_move(t_list *list, t_vars *vars)
   if (check_game(list, vars) == 0)
     my_putstr(LOST);
   else
-    my_show_list(list);
+    my_show_list(list, list->num);
   return (0);
 }
 

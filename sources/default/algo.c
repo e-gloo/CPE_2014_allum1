@@ -5,7 +5,7 @@
 ** Login   <coodie_d@epitech.net>
 ** 
 ** Started on  Sat Feb  7 17:44:08 2015 Dylan Coodien
-** Last update Sun Feb 15 15:29:56 2015 Dylan Coodien
+** Last update Fri Feb 20 10:07:11 2015 Dylan Coodien
 */
 
 #include <stdlib.h>
@@ -36,7 +36,6 @@ int		turn_in(t_list *list, t_algo *al)
 {
   t_list	*tmp;
 
-  tmp = list->next;
   while (al->n <= (al->len - 1))
     {
       al->count = 0;
@@ -95,6 +94,6 @@ char		*algo(t_list *list, t_vars *vars)
   if (al != NULL)
     free(al);
   if (check_game(list, vars) != 0)
-    my_show_list(list);
+    my_show_list(list, list->num);
   return (NULL);
 }

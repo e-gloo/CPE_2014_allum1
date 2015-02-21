@@ -5,7 +5,7 @@
 ** Login   <coodie_d@epitech.net>
 ** 
 ** Started on  Fri Feb  6 13:30:46 2015 Dylan Coodien
-** Last update Sat Feb 14 16:29:55 2015 Dylan Coodien
+** Last update Thu Feb 19 18:00:27 2015 Dylan Coodien
 */
 
 #include <stdlib.h>
@@ -48,10 +48,11 @@ void		display_info(t_list *tmp)
   my_putchar(' ');
 }
 
-void		my_show_list(t_list *list)
+void		my_show_list(t_list *list, int space)
 {
   t_list	*tmp;
   int		num;
+  int		i;
 
   tmp = list->next;
   my_putstr("\n");
@@ -59,6 +60,12 @@ void		my_show_list(t_list *list)
     {
       num = 0;
       display_info(tmp);
+      i = 0;
+      while ((space != 0) && i != (((space - tmp->num) / 2) + 1))
+	{
+	  my_putchar(' ');
+	  i++;
+	}
       while (num != tmp->num)
 	{
 	  my_putstr("|");

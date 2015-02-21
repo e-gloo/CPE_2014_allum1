@@ -16,10 +16,6 @@ and may remove any number of matches provided they all come from the same row.
 
 OPTIONS
    Matching Control
-	-b, --bonuskinder
-		Play against the almost perfect IA. If you find the way break the IA's
-		strategy, you win a Kinder.
-
 	-h, --help
 		Print a usage message briefly summarizing these command-line options and the
 		bug-reporting address, then exit.
@@ -27,9 +23,6 @@ OPTIONS
 	-p, --personalize
 		Let you choose many options such as the disposition of the game, the mode,
 		the level of the IA, and the first player.
-
-	-t, --term
-		Changing the text mode into graphics mode with different way to play.
 
 EXIT STATUS
 	Two ways to stop the game. First, you can type 'give up' during your turn at any time

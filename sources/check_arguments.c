@@ -5,7 +5,7 @@
 ** Login   <coodie_d@epitech.net>
 ** 
 ** Started on  Fri Feb 13 14:36:11 2015 Dylan Coodien
-** Last update Sat Feb 14 14:02:57 2015 Dylan Coodien
+** Last update Sat Feb 21 11:51:36 2015 Dylan Coodien
 */
 
 #include <stdlib.h>
@@ -16,20 +16,18 @@ char		**opt(void)
 {
   char		**tab;
 
-  if ((tab = malloc(sizeof(char *) * 6)) == NULL)
+  if ((tab = malloc(sizeof(char *) *4)) == NULL)
     return (NULL);
   tab[0] = "--help";
   tab[1] = "-h";
   tab[2] = "--personalize";
   tab[3] = "-p";
-  tab[4] = "--term";
-  tab[5] = "-t";
   return (tab);
 }
 
 int		check_arg(int ac, char **av)
 {
-  int		(*fptr[6])();
+  int		(*fptr[4])();
   char		**tab;
   int		i;
   int		n;
@@ -38,8 +36,6 @@ int		check_arg(int ac, char **av)
   fptr[1] = (&help);
   fptr[2] = (&perso);
   fptr[3] = (&perso);
-  fptr[4] = (&term);
-  fptr[5] = (&term);
   if ((tab = opt()) == NULL)
     return (ac);
   i = 0;

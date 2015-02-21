@@ -5,7 +5,7 @@
 ** Login   <coodie_d@epitech.net>
 ** 
 ** Started on  Fri Feb  6 13:08:16 2015 Dylan Coodien
-** Last update Sun Feb 15 17:52:09 2015 Dylan Coodien
+** Last update Sat Feb 21 11:51:05 2015 Dylan Coodien
 */
 
 #ifndef ALUM1_H_
@@ -57,10 +57,9 @@ void		free_list(t_list *list);
 char		**my_str_to_word_tab(char *str);
 int		my_put_in_list(t_list *list);
 int		begin_game(void);
-void		my_show_list(t_list *list);
+void		my_show_list(t_list *list, int space);
 int		check_arg(int ac, char **av);
 int		action(t_list *list);
-int		term(void);
 int		perso(void);
 int		help(void);
 int		check_longer(t_list *list);

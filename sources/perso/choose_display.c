@@ -5,7 +5,7 @@
 ** Login   <coodie_d@epitech.net>
 ** 
 ** Started on  Fri Feb 13 15:15:40 2015 Dylan Coodien
-** Last update Sat Feb 14 16:36:48 2015 Dylan Coodien
+** Last update Sat Feb 21 11:58:47 2015 Dylan Coodien
 */
 
 #include <unistd.h>
@@ -41,6 +41,7 @@ int		both(t_info *info, t_list *list)
 
   info->nb_row = 1;
   buff[0] = '\0';
+  my_putstr(POS);
   while ((my_strcmp(buff, STOP)) != 0)
     {
       my_putstr(HM);
@@ -77,6 +78,13 @@ int		choose_display(t_info *info, t_list *list)
       buff[n] = '\0';
     }
   if ((my_strcmp(buff, BOTH)) == 0)
-    return (both(info, list));
-  return (nb_row(info, list));
+    {
+      while ((both(info, list)) == 0 && list->next->num <= 0)
+	my_puterror(AGAIN);
+      list->num = 0;
+      return (0);
+    }
+  nb_row(info, list);
+  list->num = list->prev->num;
+  return (0);
 }

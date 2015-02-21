@@ -5,7 +5,7 @@
 ** Login   <coodie_d@epitech.net>
 ** 
 ** Started on  Fri Feb 13 15:13:58 2015 Dylan Coodien
-** Last update Sun Feb 15 15:56:31 2015 Dylan Coodien
+** Last update Sat Feb 21 11:53:51 2015 Dylan Coodien
 */
 
 #ifndef PERSO_H_
@@ -16,8 +16,9 @@
 # define WHAT	"\nType 'row only' or 'both' to choose :"
 # define ONLY	"row only\n"
 # define BOTH	"both\n"
+# define AGAIN	"\nYou must put at least a match in the row number 1\n"
 # define HM	"\nHow many matches do you want in the row "
-# define POS	"\nChoose between 1 and 50\n"
+# define POS	"\nChoose between 1 and 50 and type 'stop' to stop\n"
 # define STOP	"stop\n"
 # define ROW	"\nChoose the number of row between 1 and 25 :"
 # define MODE	"\nAgainst whom do you want to play ?\n"
@@ -36,7 +37,7 @@
 # define ME	"me\n"
 # define IA	"IA\n"
 # define IAORME	"\nType 'me' or 'IA' to choose :"
-# define TIPS	"cheat\n"
+# define TIPS	"tips\n"
 # define LOOSER	"\nTake what you want, you already lost\n"
 
 #include "alum1.h"

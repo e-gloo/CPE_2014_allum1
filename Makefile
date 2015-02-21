@@ -5,7 +5,7 @@
 ## Login   <coodie_d@epitech.net>
 ## 
 ## Started on  Fri Feb  6 12:58:14 2015 Dylan Coodien
-## Last update Sun Feb 15 15:56:08 2015 Dylan Coodien
+## Last update Sat Feb 21 11:50:48 2015 Dylan Coodien
 ##
 
 NAME	= allum1
@@ -23,7 +23,6 @@ SRC1	= ./sources/main.c \
 	  ./sources/default/my_putnbr_base_rev.c \
 	  ./sources/default/algo.c \
 	  ./sources/help/help.c \
-	  ./sources/term/term.c \
 	  ./sources/perso/choose_display.c \
 	  ./sources/perso/choose_first.c \
 	  ./sources/perso/choose_mode.c \
