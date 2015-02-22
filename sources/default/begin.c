@@ -5,7 +5,7 @@
 ** Login   <coodie_d@epitech.net>
 ** 
 ** Started on  Tue Feb 10 15:09:47 2015 Dylan Coodien
-** Last update Thu Feb 19 18:07:04 2015 Dylan Coodien
+** Last update Sun Feb 22 18:35:02 2015 Dylan Coodien
 */
 
 #include <unistd.h>
@@ -17,6 +17,7 @@ int		begin_game(void)
 {
   t_list	*list;
 
+  my_putstr(OPTION);
   if ((list = malloc(sizeof(*list))) == NULL)
     return (1);
   list->next = list;

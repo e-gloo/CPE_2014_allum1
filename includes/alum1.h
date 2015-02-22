@@ -5,7 +5,7 @@
 ** Login   <coodie_d@epitech.net>
 ** 
 ** Started on  Fri Feb  6 13:08:16 2015 Dylan Coodien
-** Last update Sat Feb 21 11:51:05 2015 Dylan Coodien
+** Last update Sun Feb 22 18:36:55 2015 Dylan Coodien
 */
 
 #ifndef ALUM1_H_
@@ -13,6 +13,7 @@
 
 # define SIZE	1024
 # define BASE	"01"
+# define OPTION	"\nIf you retry with the game with '-h' or '--help', you'll find the the way to play with much more fun !\n"
 # define VALIDE	"\nPlease choose a valid row\n"
 # define MATCH	"\nPlease, take at least one match\n"
 # define CHOOSE	"\nType 'yes' or 'no' to choose\n"
